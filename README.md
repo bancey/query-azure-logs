@@ -29,7 +29,7 @@ Combine all raw JSON files into a single JSONL file:
 bash combine-raw-data.sh
 ```
 
-This creates `data/combined.jsonl`.
+This creates `data/combined.jsonl`. Depending on the amount of data, this may take some time. For approx 50GB of raw data it took around 2 minutes. 
 
 ### 2. Filter Data by SNI
 
@@ -39,7 +39,7 @@ Filter the combined data for a specific SNI value:
 bash filter-data.sh <sni_value>
 ```
 
-This creates `data/combined_filtered.jsonl` containing only entries matching the given SNI.
+This creates `data/combined_filtered.jsonl` containing only entries matching the given SNI. Again depending on the amount of data, this may take some time. For example, filtering a 50GB dataset took around 10 minutes.
 
 ### 3. Analyze Logs in Python
 
